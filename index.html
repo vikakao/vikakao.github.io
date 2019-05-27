@@ -1,11 +1,101 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Color Toggle </title>
+<style type="text/css">
+	body {
+		background: #232323;
+		margin: 0;
+		font-family: "Montserrat", "Avenir";
+	}
+	.square {
+		width: 30%;
+		background: purple;
+		padding-bottom: 30%;
+		float: left;
+		margin: 1.666%;
+		border-radius: 15%;
+		transition: 0.5s;
+	}
+	#container {
+		margin: 0 auto;
+		max-width: 600px;
+	}
+	h1 {
+		font-weight: lighter;
+		font-family: Geneva, Arial, Helvetica, sans-serif;
+		text-transform: uppercase;
+		padding-top: 2%;
+		padding-bottom: 4%;
+		margin-bottom: 0%;
+		margin-top:0%;
+		text-align: center;
+		color: white;
+		font-size: 50px;
+		background: steelblue;
+	}
+	#message {
+	color: black;
+	display: inline-block;
+	width: 20%;
+	}
 
+	.m {
+		font-size: 22px;
+		color: steelblue;
+		background: white;
+		text-align: center;
+	}
+
+	
+button {
+	border: none;
+	background: none;
+	text-transform: uppercase;
+	height: 100%;
+	font-weight: 700;
+	color: steelblue;
+	letter-spacing: 1px;
+	font-size: inherit;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+}
+
+button:hover {
+	color: white;
+	background: steelblue;
+}
+#colorDisplay {
+	font-size: 200%;
+
+}
+.selected {
+	color: white;
+	background: steelblue;
+}
+
+</style>
+<head>
+	<title>Color Game</title>
 </head>
 <body>
-<button>Click Me</button>	
-<script type="text/javascript" src="index.js"></script>
+	<h1><div>The Great</div> <span id="colorDisplay">RGB</span><div>Color Game</div> </h1>
+	<div class="m"> 
+	<button id="again">NEW COLORS</button>
+	<span id="message"></span>
+	<button id="easy">EASY</button> 
+	<button id="hard">HARD</button>	
+	</div>
+	<div id="container">
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	</div>
+<script type="text/javascript" src="colorGame.js"></script>
+
+
+
 </body>
 </html>
